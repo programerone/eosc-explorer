@@ -1,14 +1,14 @@
-# ETCExplorer
+# EOS Classic Blockchain Explorer
 
-<b>Live Version: [etherhub.io](http://etherhub.io)</b>
+[![Build Status](https://travis-ci.org/eosclassic/eosc-explorer.svg?branch=master)](https://travis-ci.org/eosclassic/eosc-explorer)
 
-Follow the project progress at: [ETC Block Explorer Development](https://github.com/ethereumproject/explorer)
+<b>Live Version: [explorer.eos-classic.io](https://explorer.eos-classic.io)</b>
 
 ## Local installation
 
 Clone the repo
 
-`git clone https://github.com/ethereumproject/explorer`
+`git clone https://github.com/eosclassic/eosc-explorer`
 
 Download [Nodejs and npm](https://docs.npmjs.com/getting-started/installing-node "Nodejs install") if you don't have them
 
@@ -42,10 +42,10 @@ Basic settings:
     "patch":        true,
     "patchBlocks":  100,
     "settings": {
-        "symbol": "ETC",
-        "name": "Ethereum Classic",
-        "title": "Ethereum Classic Block Explorer",
-        "author": "Elaine"
+        "symbol": "EOSC",
+        "name": "EOS Classic",
+        "title": "EOS Classic Blockchain Explorer",
+        "author": "EOSC"
     }
 }
 
@@ -55,7 +55,7 @@ Basic settings:
 
 ```gethPort```    Your node API RPC port.
 
-```startBlock```  This is the start block of the blockchain, should always be 0 if you want to sync the whole ETC blockchain.
+```startBlock```  This is the start block of the blockchain, should always be 0 if you want to sync the whole EOSC blockchain.
 
 ```endBlock```    This is usually the 'latest'/'newest' block in the blockchain, this value gets updated automatically, and will be used to patch missing blocks if the whole app goes down.
 
@@ -77,3 +77,9 @@ it will also start sync.js and start syncing the blockchain based on set paramet
 
 You can leave sync.js running without app.js and it will sync and grab blocks based on config.json parameters
 `node ./tools/sync.js`
+
+### Credits
+
+Originally made by [ethereumproject - explorer](https://github.com/ethereumproject/explorer)
+
+Modified by eosclassicteam for EOS Classic usage.
