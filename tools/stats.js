@@ -8,7 +8,7 @@ var mongoose = require( 'mongoose' );
 var BlockStat = require( '../db.js' ).BlockStat;
 
 var updateStats = function(range, interval, rescan) {
-    var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+    var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8282'));
 
     mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/blockDB');
     mongoose.set('debug', true);
@@ -112,7 +112,7 @@ var checkBlockDBExistsThenWrite = function(web3, blockData, nextBlock, endNumber
 }
 
 /** On Startup **/
-// geth --rpc --rpcaddr "localhost" --rpcport "8545"  --rpcapi "eth,net,web3"
+// geth --rpc --rpcaddr "localhost" --rpcport "8282"  --rpcapi "eth,net,web3"
 
 var minutes = 1;
 statInterval = minutes * 60 * 1000;
