@@ -172,7 +172,7 @@ var getTotal = function(req, res) {
                       .lean(true).sort('-number');
   block.exec(function (err, doc) {
     // res.write(JSON.stringify(doc));
-    var total = 900000000 + (doc.number) * 600;
+    var total = (doc.number) * 60;
     res.write(total.toString());
     res.end();
   });
