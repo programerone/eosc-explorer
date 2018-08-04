@@ -14,6 +14,7 @@
         "title": "EOS Classic Blockchain Explorer",
         "author": "EOS Classic",
         "useEthFiat": false,
+        "tokenList": "tokens.json",
         "miners": {
             "0x43608ad491d4dde670a1641a878588b2cacd11e5": "pool.eos-classic.io",
             "0xd8e896f34926a6781bb7d7348bd268d7f029f13e": "eosc.farmine.net",
