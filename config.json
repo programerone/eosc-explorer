@@ -16,13 +16,11 @@
         "useEthFiat": false,
         "miners": {
             "0x43608ad491d4dde670a1641a878588b2cacd11e5": "pool.eos-classic.io",
-            "0x363d67beefb3876cbeadac0f0a7056300eeddb19": "eosc.methpool.com",
             "0xd8e896f34926a6781bb7d7348bd268d7f029f13e": "eosc.farmine.net",
             "0x9d2a67c7026802646b410b3cc59706a78c2c5257": "pool.baikalmine.com",
             "0xeda79f0735a56510876a497e1c105916666b0199": "comining.io",
             "0x8ad13d92297b8d0ee444bec15d61d58c72d93a6e": "eosc.gominer.cn",
             "0x4322d54cd04253465d660e781f0025ba98f8e077": "eoscpool.com",
-            "0x53678e1f69a308ee31c63636b815658ccdb77acb": "eosc.vipool.net",
             "0xd8f0eaebb3237eb7254ca5bcde7739d52090d85c": "pool.eos-classic.fr",
             "0xd538730ee3d8ba902e771e8e9c7a01d5bf998951": "eosc.digipools.org",
             "0xd144e30a0571aaf0d0c050070ac435deba461fab": "eos.clona.ru"
