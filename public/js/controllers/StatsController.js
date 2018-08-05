@@ -2,22 +2,22 @@ angular.module('BlocksApp').controller('StatsController', function($stateParams,
 
     $rootScope.isHome = false;
     $scope.settings = $rootScope.setup;
-  
+
     /*
-      Chart types: 
+      Chart types:
         hashrate: Hashrate Growth
         miner_hashrate: Miner Hashrate Distribution
     */
 
     const CHART_TYPES = {
         "hashrate": {
-            "title": "Hashrate Growth"
+            "title": "Hashrate Chart"
         },
         "blocktime": {
-            "title": "Blocktime chart"
+            "title": "Blocktime Chart"
         },
         "difficulty": {
-            "title": "Difficulty chart"
+            "title": "Difficulty Chart"
         },
         "miner_hashrate": {
             "title": "Miner Hashrate Distribution"
@@ -1289,7 +1289,7 @@ angular.module('BlocksApp').controller('StatsController', function($stateParams,
         .then(function(res) {
           //console.log(res.data);
 
-          res.data.hashrates.forEach(function(d) { d.difficulty = d.difficulty / d.blockTime; }); // FIXME 
+          res.data.hashrates.forEach(function(d) { d.difficulty = d.difficulty / d.blockTime; }); // FIXME
           scope.init(res.data, '#bombchartwithecip1010');
         });
 
