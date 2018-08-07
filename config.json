@@ -14,7 +14,6 @@
         "title": "EOS Classic Testnet Blockchain Explorer",
         "author": "EOS Classic Testnet",
         "useEthFiat": false,
-        "tokenList": "tokens.json",
         "miners": {
             "0x3f2ef66cbf6515b4f8cd041d1c53b508ed205f63": "test-pool.eos-classic.io"
          }

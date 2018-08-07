@@ -27,30 +27,6 @@ angular.module('BlocksApp').controller('TokenController', function($stateParams,
         $rootScope.$state.current.data["pageTitle"] = resp.data.name;
     });
 
-    // fetch transactions
-    var fetchTxs = function(after) {
-      var data = {"action": "transaction", "address": $scope.addrHash};
-      if (after && after > 0) {
-        data.after = after;
-      }
-      $http({
-        method: 'POST',
-        url: '/tokenrelay',
-        data
-      }).then(function(resp) {
-        $scope.contract_transactions = resp.data.transaction;
-        $scope.page = { count: resp.data.count, after: resp.data.after, next: resp.data.after + resp.data.count};
-        if (resp.data.after > 0) {
-          $scope.page.prev = resp.data.after - resp.data.count;
-        } else {
-          $scope.page.prev = 0;
-        }
-      });
-    };
-
-    fetchTxs();
-    $scope.fetchTxs = fetchTxs;
-
     $scope.form = {};
     $scope.errors = {};
     $scope.showTokens = false;
@@ -93,23 +69,5 @@ angular.module('BlocksApp').controller('TokenController', function($stateParams,
           scope.contract = resp.data;
         });
       }
-  }
-})
-.directive('transferTokens', function($http) {
-  return {
-    restrict: 'E',
-    templateUrl: '/views/transfer-tokens.html',
-    scope: false,
-    link: function(scope, elem, attrs) {
-      //fetch transfer
-      $http({
-        method: 'POST',
-        url: '/tokenrelay',
-        data: {"action": "transfer", "address": scope.addrHash}
-      }).then(function(resp) {
-        scope.transfer_tokens = resp.data.transfer;
-        scope.page = {after: resp.data.after, count: resp.data.count};
-      });
-    }
   }
 })
