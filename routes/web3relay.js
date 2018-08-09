@@ -40,7 +40,7 @@ if (!('nodeAddr' in config) || !(config.nodeAddr)) {
 }
 // set the default geth port if it's not provided
 if (!('gethPort' in config) || (typeof config.gethPort) !== 'number') {
-    config.gethPort = 8282; // default
+    config.gethPort = 8545; // default
 }
 
 //Create Web3 connection

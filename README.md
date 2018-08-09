@@ -34,7 +34,7 @@ Basic settings:
 ```json
 {
     "nodeAddr":     "localhost",
-    "gethPort":     8282,
+    "gethPort":     8545,
     "startBlock":   0,
     "endBlock":     "latest",
     "quiet":        true,
