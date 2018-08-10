@@ -10,10 +10,11 @@ EOSC_BINARY = '/usr/local/bin/eosc'
 RICHLIST_DB = '/home/ubuntu/richlist/richlist.db'
 RICHLIST_JS = '/home/ubuntu/eosc-explorer/public/views/richlist.js'
 RICHLIST_TMP = '/home/ubuntu/richlist/richlist.tmp'
+PARITY_IPC = '/home/ubuntu/.local/share/io.parity.ethereum/jsonrpc.ipc'
 
 
 def eosc_call(cmd):
-    result = subprocess.run([EOSC_BINARY, '--exec', cmd, 'attach'], stdout=subprocess.PIPE)
+    result = subprocess.run([EOSC_BINARY, '--exec', cmd, 'attach', PARITY_IPC], stdout=subprocess.PIPE)
     return re.sub(r"\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]", "", result.stdout.decode('utf-8'))
 
 
