@@ -6,11 +6,17 @@
 
 ## Local installation
 
+### Requirement
+
++ [Parity-eosclassic](https://github.com/eosclassic/parity-eosclassic) 
+
++ [Nodejs](https://docs.npmjs.com/getting-started/installing-node "Nodejs install")
+
+### Install
+
 Clone the repo
 
 `git clone https://github.com/eosclassic/eosc-explorer`
-
-Download [Nodejs and npm](https://docs.npmjs.com/getting-started/installing-node "Nodejs install") if you don't have them
 
 Install dependencies:
 
@@ -36,7 +42,6 @@ Basic settings:
     "nodeAddr":     "localhost",
     "gethPort":     8545,
     "startBlock":   0,
-    "endBlock":     "latest",
     "quiet":        true,
     "syncAll":      true,
     "patch":        true,
@@ -69,7 +74,10 @@ Basic settings:
 
 
 ### Run:
-The below will start both the web-gui and sync.js (which populates MongoDV with blocks/transactions).
+The below will start sync.js (which populates MongoDB with blocks/transactions).
+`npm start`
+
+The below will start web-gui on http://localhost:3000 by default.
 `npm start`
 
 You can leave sync.js running without app.js and it will sync and grab blocks based on config.json parameters
@@ -77,6 +85,9 @@ You can leave sync.js running without app.js and it will sync and grab blocks ba
 
 Enabling stats requires running a separate process:
 `node ./tools/stats.js`
+
+Enabling rich list requires running a separate process one time:
+`node ./tools/richlist.js`
 
 You can configure intervals (how often a new data point is pulled) and range (how many blocks to go back) with the following:
 `RESCAN=1000:100000 node tools/stats.js` (New data point every 1,000 blocks. Go back 100,000 blocks).
