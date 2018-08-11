@@ -38,6 +38,21 @@ module.exports = function(app){
 
   app.post('/fiat', fiat);
   app.post('/stats', stats);
+
+  app.get('/api/richlist', richList);
+  app.get('/api/addr', getAddr);
+  app.get('/api/addr_count', getAddrCounter);
+  app.get('/api/tx', getTx);
+  app.get('/api/block', getBlock);
+  app.get('/api/data', getData);
+
+  app.get('/api/daorelay', DAO);
+  app.get('/api/tokenrelay', Token);
+  app.get('/api/web3relay', web3relay.data);
+  app.get('/api/compile', compile);
+
+  app.get('/api/fiat', fiat);
+  app.get('/api/stats', stats);
 }
 
 var getAddr = function(req, res){
