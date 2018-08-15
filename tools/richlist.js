@@ -329,6 +329,7 @@ var bulkInsert = function(bulk) {
       }
     } else {
       console.log('* ' + data.insertedCount + ' accounts successfully inserted.');
+      bulkInsert(bulk);
     }
   });
 }
