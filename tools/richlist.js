@@ -205,7 +205,7 @@ function makeRichList(toBlock, blocks, updateCallback) {
     } else {
       setTimeout(function() {
         makeRichList(fromBlock, blocks, updateCallback);
-      }, 300);
+      }, 3000);
     }
   });
 }
@@ -290,7 +290,7 @@ function makeParityRichList(number, offset, blockNumber, updateCallback) {
     }
     setTimeout(function() {
       makeParityRichList(number, lastAccount, blockNumber, updateCallback);
-    }, 300);
+    }, 3000);
   });
 }
 
@@ -349,7 +349,7 @@ var bulkInsert = function(bulk) {
           if (bulk.length > 0) {
             setTimeout(function() {
               bulkInsert(bulk);
-            }, 200);
+            }, 2000);
           }
         });
       } else {
@@ -361,7 +361,7 @@ var bulkInsert = function(bulk) {
       if (bulk.length > 0) {
         setTimeout(function() {
           bulkInsert(bulk);
-        }, 200);
+        }, 2000);
       }
     }
   });
